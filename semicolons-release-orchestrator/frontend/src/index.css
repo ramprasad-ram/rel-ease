@@ -1,0 +1,111 @@
+:root {
+  --text: #5a6072;
+  --text-h: #0f172a;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --panel-muted: #f8faff;
+  --border: #d9e2f0;
+  --accent: #6d5efc;
+  --accent-strong: #14b8a6;
+  --accent-bg: rgba(109, 94, 252, 0.1);
+  --shadow:
+    0 16px 40px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.05);
+
+  --sans:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  --heading:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+
+  font: 17px/1.6 var(--sans);
+  letter-spacing: 0.01em;
+  color-scheme: light;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(109, 94, 252, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #eef3f8 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9aa6bd;
+    --text-h: #f8fafc;
+    --bg: #081120;
+    --surface: #0f172a;
+    --panel-muted: #111c34;
+    --border: #24314d;
+    --accent: #8b7cff;
+    --accent-strong: #22d3ee;
+    --accent-bg: rgba(139, 124, 255, 0.18);
+    --shadow:
+      0 18px 50px rgba(2, 6, 23, 0.45),
+      0 6px 18px rgba(2, 6, 23, 0.28);
+
+    color-scheme: dark;
+    background:
+      radial-gradient(circle at top, rgba(139, 124, 255, 0.14), transparent 28%),
+      linear-gradient(180deg, #040b16 0%, #081120 100%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  letter-spacing: -0.04em;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  :root {
+    font-size: 15px;
+  }
+}
