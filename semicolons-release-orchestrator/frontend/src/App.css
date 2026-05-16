@@ -32,9 +32,18 @@
   margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 12px;
+  font-size: 36px;
   font-weight: 700;
-  color: var(--accent);
+  background: linear-gradient(135deg, #6d5efc 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-copy h1 {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0;
 }
 
 .hero-text {
@@ -249,6 +258,7 @@
 
 .section-heading h2 {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 .checks-list,
